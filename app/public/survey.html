@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>FriendFinder Survey</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <style>
+      body {
+        background-color: lightgoldenrodyellow;
+      }
+      .container {
+        width: 670px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+
+      <h1>FriendFinder Survey</h1>
+
+      <hr>
+      <h2>About You</h2>
+      <br>
+
+      <label for="name"><b>Name</b> (required)</label>
+      <input type="text" class="form-control form-control-lg question" id="name">
+      <br>
+
+      <label for="photoUrl"><b>Link to Photo Image</b> (required)</label>
+      <input type="text" class="form-control form-control-lg question" id="photoUrl">
+      <br>
+
+      <h2>The Questions</h2>
+      <br>
+
+      <label for="q1"><b>1. Your mind is always buzzing with unexplored ideas and plans.</b></label>
+      <select class="form-control form-control-lg question" id="q1">
+        <option selected disabled>Select an option</option>
+        <option>1 (strongly disagree)</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5 (strongly agree)</option>
+      </select>
+      <br>
+
+      <label for="q2"><b>2. Generally speaking, you rely more on your experience than your imagination.</b></label>
+      <select class="form-control form-control-lg question" id="q2">
+        <option selected disabled>Select an option</option>
+        <option>1 (strongly disagree)</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5 (strongly agree)</option>
+      </select>
+      <br>
+
+      <label for="q3"><b>3. You find it easy to stay relaxed and focused even when there is some pressure.</b></label>
+      <select class="form-control form-control-lg question" id="q3">
+        <option selected disabled>Select an option</option>
+        <option>1 (strongly disagree)</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5 (strongly agree)</option>
+      </select>
+      <br>
+
+      <label for="q4"><b>4. You rarely do something just out of sheer curiosity.</b></label>
+      <select class="form-control form-control-lg question" id="q4">
+        <option selected disabled>Select an option</option>
+        <option>1 (strongly disagree)</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5 (strongly agree)</option>
+      </select>
+      <br>
+
+      <label for="q5"><b>5. People can rarely upset you.</b></label>
+      <select class="form-control form-control-lg question" id="q5">
+        <option selected disabled>Select an option</option>
+        <option>1 (strongly disagree)</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5 (strongly agree)</option>
+      </select>
+      <br>
+
+      <label for="q6"><b>6. It is often difficult for you to relate to other people’s feelings.</b></label>
+      <select class="form-control form-control-lg question" id="q6">
+        <option selected disabled>Select an option</option>
+        <option>1 (strongly disagree)</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5 (strongly agree)</option>
+      </select>
+      <br>
+
+      <label for="q7"><b>7. In a discussion, truth should be more important than people’s sensitivities.</b></label>
+      <select class="form-control form-control-lg question" id="q7">
+        <option selected disabled>Select an option</option>
+        <option>1 (strongly disagree)</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5 (strongly agree)</option>
+      </select>
+      <br>
+
+      <label for="q8"><b>8. You rarely get carried away by fantasies and ideas.</b></label>
+      <select class="form-control form-control-lg question" id="q8">
+        <option selected disabled>Select an option</option>
+        <option>1 (strongly disagree)</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5 (strongly agree)</option>
+      </select>
+      <br>
+
+      <label for="q9"><b>9. You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</b></label>
+      <select class="form-control form-control-lg question" id="q9">
+        <option selected disabled>Select an option</option>
+        <option>1 (strongly disagree)</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5 (strongly agree)</option>
+      </select>
+      <br>
+
+      <label for="q10"><b>10. You feel more energetic after spending time with a group of people.</b></label>
+      <select class="form-control form-control-lg question" id="q10">
+        <option selected disabled>Select an option</option>
+        <option>1 (strongly disagree)</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5 (strongly agree)</option>
+      </select>
+      <br>
+
+      <button type="button" class="btn btn-primary" id="submit">Submit</button>
+      <br>
+
+      <footer class="footer">
+        <div class="container">
+          <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/bmagers/FriendFinder">GitHub Repo</a>
+        </div>
+      </footer>
+
+    </div>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      $("#submit").on("click", function(event) {
+        // create json object with results
+        // send api post request
+
+      })
+
+    </script>
+  </body>
+</html>
