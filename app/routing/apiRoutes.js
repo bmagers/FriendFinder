@@ -8,7 +8,6 @@ module.exports = function(app) {
   });
 
   app.post("/api/friends", function(req, res) {
-    var message = "";
     var friends = [];
     var smallestDifference = 50;
 
@@ -21,7 +20,6 @@ module.exports = function(app) {
         var theirScore = parseInt(item.scores[i]);
         if (yourScore !== 0 && theirScore !== 0) {
           difference += Math.abs(yourScore - theirScore);
-          console.log("you = " + yourScore + " them = " + theirScore + " and diff = " + Math.abs(yourScore - theirScore));
         }
       }
 
@@ -32,14 +30,11 @@ module.exports = function(app) {
       }
       friends.push(friend);
 
-      message += item.name + " has a difference of " + difference + " from you.\n\n";
       smallestDifference = difference < smallestDifference ? difference : smallestDifference;
 
     });
 
     var bestFriend = friends.find(bestFriend => bestFriend.difference === smallestDifference);
-    message += "Your new best friend is " + bestFriend.name + " and here's a photo: " + bestFriend.photo;
-    console.log(message);
 
     friendsData.push(req.body);
     var updatedFriendsData = "var friendsArray = " + JSON.stringify(friendsData) + ";\n\nmodule.exports = friendsArray;";
