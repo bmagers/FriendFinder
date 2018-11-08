@@ -169,11 +169,11 @@
             </button>
           </div>
           <div class="modal-body">
-            <h1 id="friendName">Name</h1>
+            <h1 id="friendName"></h1>
             <img id="friendPhoto">
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button id="modalClose" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           </div>
         </div>
       </div>
@@ -200,12 +200,20 @@
 
         $.post("/api/friends", answers, function(friend) {
           // console.log(answers);
-          $("#friendResult").modal();
           $("#friendName").text(friend.name);
-          $("#friendPhoto").attr("src", friend.photoUrl);
+          $("#friendPhoto").attr("src", friend.photo);
+          $("#friendResult").modal("toggle");
         });
 
       });
+
+      $("#modalClose").on("click", function(event) {
+        $("#name").val("");
+        $("#photoUrl").val("");
+        $(".question").val(0);
+        $(window).scrollTop(0);
+      });
+
     </script>
   </body>
 </html>
