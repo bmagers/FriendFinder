@@ -157,6 +157,27 @@
       </footer>
 
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="friendResult" tabindex="-1" role="dialog" aria-labelledby="friendResultLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="friendResultLabel">Here's your new friend!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h1 id="friendName">Name</h1>
+            <img id="friendPhoto">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
       
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -177,8 +198,11 @@
           "scores": scores
         };
 
-        $.post("/api/friends", answers, function(data) {
-          console.log(data);
+        $.post("/api/friends", answers, function(friend) {
+          // console.log(answers);
+          $("#friendResult").modal();
+          $("#friendName").text(friend.name);
+          $("#friendPhoto").attr("src", friend.photoUrl);
         });
 
       });
